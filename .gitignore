@@ -1,0 +1,6 @@
+backup/
+home/
+src/*.tar
+src/*.tar.gz
+src/*.tar.bz2
+deb/*

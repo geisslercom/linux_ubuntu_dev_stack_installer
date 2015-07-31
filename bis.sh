@@ -4,10 +4,10 @@ echo "[o] Adding Sources to Deb List"
 #wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 mkdir deb src bin
 sudo chmod 775 ./sub/*
+
 echo "[o] Update and Upgrade packages"
 sudo apt-get update
 sudo apt-get upgrade
-
 
 echo "Installing Repo Depedencies"
 packages=(
@@ -21,15 +21,15 @@ for (( i = 0; i < ${#packages[@]}; i++ )); do
 	echo "Installing Package:" ${packages[i]}
 	sudo apt-get install -y ${packages[i]}
 done
+#Oh my  ZSH
+echo "Installing Oh-My-Zsh"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+chsh -s /bin/zsh
 	
 echo "[x] Installing All Local Deps Depedencies"
 ./sub/installBin.sh
 ./sub/installDPKG.sh
 
-#Oh my  ZSH
-echo "Installing Oh-My-Zsh"
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-chsh -s /bin/zsh
 
 
 echo "Installing Remote Depedencies"

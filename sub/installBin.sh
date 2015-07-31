@@ -3,7 +3,6 @@
 cd bin
 
 
-#wget https://dl.google.com/dl/android/studio/ide-zips/1.3.0.10/android-studio-ide-141.2117773-linux.zip
 NODE_VERSION="0.12.7"
 wget https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz
 tar -xf node-v$NODE_VERSION-linux-x64.tar.gz 

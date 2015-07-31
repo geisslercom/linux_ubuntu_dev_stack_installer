@@ -27,7 +27,7 @@ read -p "Enter Github username: " ghUser
 
 echo "[*] Creating temp git dir in ~/"$prhome"/unsorted_githubrepos"
 mkdir ~/$prhome/unsorted_githubrepos
-curl -s --user $ghUser:$ghPass https://api.github.com/users/geisslercom/repos > .tmpGHrepos
+curl -s --user $ghUser:$ghPass https://api.github.com/users/$ghUser/repos > .tmpGHrepos
 < .tmpGHrepos jq '.[].ssh_url' >> ~/$prhome/unsorted_githubrepos/.tmpGHrepos
 rm .tmpGHrepos
 
@@ -36,7 +36,15 @@ cd ~/$prhome/unsorted_githubrepos
 cat .tmpGHrepos | while read line
 do
 	echo $line
-	git clone $line -key ~/.ssh/bGit.pub
+	while true; do
+	    read -p "Do you want to clone this git repo? $line y/n" yn
+	    case $yn in
+	        [Yy]* ) git clone $line -key ~/.ssh/bGit.pub ; break;;
+	        [Nn]* ) exit;;
+	        * ) echo "Please answer yes or no.";;
+	    esac
+	done
+	
 done
 
 #rm .tmpGHrepos

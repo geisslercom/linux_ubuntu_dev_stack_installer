@@ -14,5 +14,6 @@ echo "[x] Download All Local birdie Depedencies"
 wget https://github.com/birdieapp/birdie/releases/download/1.1/birdie_1.1.0.r421.pkg19.ubuntu14.04.1_amd64.deb
 echo "[x] Install All Local Deps Depedencies"
 sudo dpkg -i *
+sudo apt-get install -f -y
 rm *.deb 
 cd ..

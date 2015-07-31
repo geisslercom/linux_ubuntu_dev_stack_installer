@@ -2,7 +2,7 @@
 echo "[o] Ben's Linux Stack Installing Script"
 echo "[o] Adding Sources to Deb List"
 #wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-#mkdir deb src bin
+mkdir deb src bin
 sudo chmod 775 ./sub/*
 echo "[o] Update and Upgrade packages"
 sudo apt-get update

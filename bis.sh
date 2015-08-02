@@ -50,7 +50,7 @@ sudo mv composer.phar /usr/local/bin/composer
 
 #Ruby Zeug
 echo "Installing Ruby Depedencies"
-gem install compass &
+sudo gem install compass &
 
 
 echo "[*] Initzialize Private Project stuff"

@@ -11,7 +11,7 @@ sudo apt-get upgrade
 
 echo "Installing Repo Depedencies"
 packages=(
-	"rhythmbox" "rsync" "ruby" "zsh" "apache2" "android-tools-adb" "hgtortoise" "hgtortoise-nautilus"
+	"rhythmbox" "rsync" "ruby" "ruby-dev" "zsh" "apache2" "android-tools-adb" "hgtortoise" "hgtortoise-nautilus"
 	"android-tools-fastboot" "hardinfo" "docky" "evolution"
 	"g++" "gcc" "ftp" "js" "curl" "wget" "gparted" "golang" "htop" "mysql-server"
 	"mysql-workbench" "php5" "git" "mercurial" "vim" ""
@@ -25,7 +25,7 @@ done
 echo "Installing Oh-My-Zsh"
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 chsh -s /bin/zsh
-	
+
 echo "[x] Installing All Local Deps Depedencies"
 ./sub/installBin.sh
 ./sub/installDPKG.sh
@@ -50,7 +50,7 @@ sudo mv composer.phar /usr/local/bin/composer
 
 #Ruby Zeug
 echo "Installing Ruby Depedencies"
-gem install compass &
+sudo gem install compass &
 
 
 echo "[*] Initzialize Private Project stuff"

@@ -1,9 +1,8 @@
-#!/bin/bash
-
+#!/bin/zsh
 npmp=(
-	"npm" "flightplan"
+	"grunt-cli" "less" "coffee" "mocha" "firebase-tools"
+	"npm" "flightplan" 
 	"yo" "generator-angularfire" "generator-angular" "generator-chrome-extension" "generator-node-webkit"
-	"grunt-cli" "less" "coffee" "mocha"
 )
 
 for (( i = 0; i < ${#npmp[@]}; i++ )); do

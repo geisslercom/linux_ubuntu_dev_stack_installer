@@ -1,6 +1,5 @@
-backup/
-home/
-src/*.tar
-src/*.tar.gz
-src/*.tar.bz2
-deb/*
+/node_modules
+/dist
+/.tmp
+/.sass-cache
+/bower_components

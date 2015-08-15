@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "[o] Ben's Linux Stack Installing Script"
+echo "[o] Linux Stack Installing Script"
 echo "[o] Adding Sources to Deb List"
 #wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 mkdir deb src bin

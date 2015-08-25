@@ -29,6 +29,10 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/packets', {
+        templateUrl: 'views/packets.html',
+        controller: 'PacketsCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

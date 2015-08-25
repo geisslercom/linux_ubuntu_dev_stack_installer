@@ -1,0 +1,23 @@
+<h3>Check your Packetes</h3>
+
+
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<h3>Node Packetes</h3>
+		<h5 class="">Pakete: {{packets.node.length}}</h5>
+		<h5 class="">Makiert: {{nodeChecked.length}}</h5>
+	</div>
+	<div class="panel-body">
+		<ul class="list-group">
+			<li 
+				class="list-group-item" 
+				ng-class="!nodeChecked.indexOf(value) ? 'active' : ''" 
+				ng-repeat="(key, value) in packets.node" 
+				ng-click="mark(this); active='active'">
+				{{value}}
+			</li>
+		</ul>
+	</div>
+
+	<button class="btn btn-primary" ng-click="checkout();">Checkout</button>
+</div>

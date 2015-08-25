@@ -1,0 +1,16 @@
+{
+	"shell" : [
+		"htop",
+		"git",
+		"rub-dev",
+		"apache2",
+		"php5"
+	],
+
+	"node" : [
+		"flightplan",
+		"yo",
+		"grunt-cli",
+		"bower"
+	]
+}
